@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/boni23/static/css/main.0da84b7d.css",
-    "main.js": "/boni23/static/js/main.8aec6cba.js",
+    "main.js": "/boni23/static/js/main.8edfa50b.js",
     "index.html": "/boni23/index.html",
     "main.0da84b7d.css.map": "/boni23/static/css/main.0da84b7d.css.map",
-    "main.8aec6cba.js.map": "/boni23/static/js/main.8aec6cba.js.map"
+    "main.8edfa50b.js.map": "/boni23/static/js/main.8edfa50b.js.map"
   },
   "entrypoints": [
     "static/css/main.0da84b7d.css",
-    "static/js/main.8aec6cba.js"
+    "static/js/main.8edfa50b.js"
   ]
 }
