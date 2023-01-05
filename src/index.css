@@ -35,3 +35,69 @@ strong {
   margin: auto;
   padding: 5px 15px;
 }
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table thead tr {
+  background-color: rgb(196, 15, 39);	
+  color: #ffffff;
+  text-align: left;
+}
+table th,
+table td {
+  padding: 10px 12px;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(196, 15, 39);	
+}
+
+@media (max-width: 600px) {
+  table th,
+  table td {
+    padding: 6px 8px;
+  }
+  
+  .table {
+    padding: 5px 0px;
+  }
+}
+
+td.procent {
+  font-weight: bold;
+  font-size: 1.1em;
+  font-style: italic;
+  color:rgb(86, 97, 129);
+}
+
+td.procent.red {
+  color: rgb(196, 15, 39);	
+}
+
+td.procent.free, 
+td.procent.red.free {
+  color: rgb(206, 178, 103);	
+}
+
+td.ime {
+  font-size: 1.05em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

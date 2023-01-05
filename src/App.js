@@ -37,7 +37,7 @@ function App() {
         <p>Z začetkom leta je v veljavo stopil nov zakon, ki <em>zvišuje</em> vrednost bona za <strong>0,68€</strong>. 
           Namesto ugodnejših cen za študente pa se je povprečno doplačilo <em>zvišalo</em> za <strong>1.08 € (35.46 %)</strong> </p>
         <p>Ob <strong>10,3%</strong> letni inflaciji oz. <strong>18,6%</strong> inflaciji cen hrane in pijače
-          je prihodek na obrok za restavracije v popvrečju večji za <strong>30.0%</strong></p>
+          dobijo restavracije za obrok v povprečju <strong>30.0%</strong> več.</p>
       </div>
       <div className='main'>
         <p>
@@ -59,20 +59,26 @@ function App() {
             <tr>
               <th>Restavracija</th>
               <th>"Vrednost obroka"</th>
-              <th>"Vrednost obroka" (prej)</th>
-              <th>Razlika</th>
-              <th>Razlika (%)</th>
+              <th>"Vrednost obroka" (lani)</th>
+              <th>Povišanje</th>
+              <th>Povišanje (%)</th>
             </tr>
           </thead>
           <tbody>
             {displayData && displayData.map((item, index) => {
               return (
                 <tr key={index}>
-                  <td>{item.lokal}</td>
+                  <td className='ime'>
+                    <a href={`https://www.studentska-prehrana.si/sl/restaurant/Details/${item.posid}`} target="_blank" rel="noreferrer">
+                      {item.lokal}
+                    </a>
+                  </td>
                   <td>{item.cena.toFixed(2)}€</td>
                   <td>{item.cena_old.toFixed(2)}€</td>
                   <td>{item.cena_diff.toFixed(2)}€</td>
-                  <td>{item.cena_diff_percent.toFixed(0)}%</td>
+                  <td className={`procent ${item.cena_diff_percent > 18.6 ? 'red' : ''} ${(item.doplacilo === 0) ? 'free' : ''}`}>
+                    {item.cena_diff_percent.toFixed(0)}%
+                  </td>
                 </tr>
               )
             })}
