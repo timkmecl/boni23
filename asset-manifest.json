@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/prehranozlom/static/css/main.0da84b7d.css",
-    "main.js": "/prehranozlom/static/js/main.9aab7c55.js",
+    "main.js": "/prehranozlom/static/js/main.f25e4cf5.js",
     "index.html": "/prehranozlom/index.html",
     "main.0da84b7d.css.map": "/prehranozlom/static/css/main.0da84b7d.css.map",
-    "main.9aab7c55.js.map": "/prehranozlom/static/js/main.9aab7c55.js.map"
+    "main.f25e4cf5.js.map": "/prehranozlom/static/js/main.f25e4cf5.js.map"
   },
   "entrypoints": [
     "static/css/main.0da84b7d.css",
-    "static/js/main.9aab7c55.js"
+    "static/js/main.f25e4cf5.js"
   ]
 }
