@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+
+import rawData from './data/restavracije.json';
 
 import Tabela from './components/Tabela';
 
@@ -11,11 +12,7 @@ function App() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('/restavracije.json').then((response) => {
-      let d = response.data
-      d = d.filter(item => item.cena && item.cena_old)
-      setData(d);
-    });
+    setData(rawData.filter(item => item.cena && item.cena_old))
   }, []);
 
   const handleCityChange = (e) => {
