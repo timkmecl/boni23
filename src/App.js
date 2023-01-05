@@ -49,7 +49,7 @@ function App() {
           <input type="search" name="search" id="search" value={search} onChange={handleSearchChange}/>
         </p>
         <p className='disclaimer'>
-            Podatki so informativne narave, ne jamčim za njihovo točnost. Interpretacijo prepuščam bralcu.
+            Podatki so zgolj informativne narave, ne jamčim za njihovo točnost in popolnost.
         </p>
       </div>
       {
@@ -57,7 +57,7 @@ function App() {
       }
 
       <div id="created-by">
-		    <p>Website created by <a href="//kmecl.tk">Tim Kmecl</a></p>
+		    <p>Website created by <a href="https://www.facebook.com/tim.kmecl/">Tim Kmecl</a></p>
 	    </div>
     </div>
   );

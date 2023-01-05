@@ -10,6 +10,7 @@ body {
   background-color: #fbfbfb;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -53,6 +54,12 @@ strong {
 .search input, .search select {
   padding: 2px;
 }
+
+.disclaimer {
+  font-size: 0.5em;
+  color:rgba(0, 0, 0, 0.5)
+}
+
 
 .table {
   max-width: 1000px;
@@ -124,4 +131,24 @@ td.ime {
 a {
   color: black;
   text-decoration: none;
+}
+
+
+
+#created-by {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 0.8em;
+	color: #888;
+	line-height: 1.5;
+  text-align: center;
+}
+
+#created-by p {
+  margin: 0 5px;
+}
+
+#created-by a {
+	color: #777;
+	font-weight: bold;
 }
