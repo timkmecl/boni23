@@ -34,12 +34,12 @@ function App() {
     <div className="App">
       <div className='main'>
         <h1>Stanje študentske prehrane 2023</h1>
-        <p>Z začetkom leta je v veljavo stopil nov zakon, ki <em>zvišuje</em> vrednost bona za <strong>0,68€</strong>. 
-          Namesto ugodnejših cen za študente pa se je povprečno doplačilo <em>zvišalo</em> za <strong>1.08 € (35.46 %)</strong> </p>
-        <p>Ob <strong>10,3%</strong> letni inflaciji oz. <strong>18,6%</strong> inflaciji cen hrane in pijače
-          dobijo restavracije za obrok v povprečju <strong>30.0%</strong> več.</p>
+        <p>S 1. januarjem se je vrednost bona <em>zvišala</em> za <strong>0,68 €</strong>. 
+          Namesto ugodnejših cen za študente pa se je povprečno doplačilo <em>zvišalo</em> za <strong>1,08 €</strong> (<strong>35 %</strong>) </p>
+        <p>Ob <strong>10,3 %</strong> letni inflaciji oz. <strong>18,6 %</strong> inflaciji cen hrane in pijače
+          dobijo restavracije za obrok zdaj v povprečju <strong>30 %</strong> več kot lani.</p>
       </div>
-      <div className='main'>
+      <div className='search'>
         <p>
           <label htmlFor="mesta">Izberi mesto: </label>
           <select name="mesta" id="mesta" value={mesto} onChange={handleMestoChange} >
@@ -50,7 +50,7 @@ function App() {
         </p>
         <p>
           <label htmlFor="search">Išči restavracijo: </label>
-          <input type="text" name="search" id="search" value={search} onChange={handleSearchChange}/>
+          <input type="search" name="search" id="search" value={search} onChange={handleSearchChange}/>
         </p>
       </div>
       <div className='table'>
@@ -59,9 +59,8 @@ function App() {
             <tr>
               <th>Restavracija</th>
               <th>"Vrednost obroka"</th>
-              <th>"Vrednost obroka" (lani)</th>
-              <th>Povišanje</th>
               <th>Povišanje (%)</th>
+              <th>Povišanje</th>
             </tr>
           </thead>
           <tbody>
@@ -73,12 +72,11 @@ function App() {
                       {item.lokal}
                     </a>
                   </td>
-                  <td>{item.cena.toFixed(2)}€</td>
-                  <td>{item.cena_old.toFixed(2)}€</td>
-                  <td>{item.cena_diff.toFixed(2)}€</td>
+                  <td>{item.cena.toFixed(2)} €</td>
                   <td className={`procent ${item.cena_diff_percent > 18.6 ? 'red' : ''} ${(item.doplacilo === 0) ? 'free' : ''}`}>
-                    {item.cena_diff_percent.toFixed(0)}%
+                    {item.cena_diff_percent.toFixed(0)} %
                   </td>
+                  <td>{item.cena_diff.toFixed(2)} €</td>
                 </tr>
               )
             })}

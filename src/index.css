@@ -22,12 +22,36 @@ code {
   font-size: 1em;
 }
 
+.main p {
+  text-align: justify;
+}
+
+.main h1, .main h2 {
+  text-align: center;
+}
+
 strong, h1, h2 {
   color: rgb(196, 15, 39);	
 }
 
 strong {
   font-size: 1.05em;
+}
+
+.search {
+  max-width: 600px;
+  margin: auto;
+  padding: 5px 25px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.search p {
+  width: 100%;
+}
+
+.search input, .search select {
+  padding: 2px;
 }
 
 .table {
@@ -90,7 +114,7 @@ td.procent.red {
 
 td.procent.free, 
 td.procent.red.free {
-  color: rgb(206, 178, 103);	
+  color: rgb(184, 184, 184);	
 }
 
 td.ime {
