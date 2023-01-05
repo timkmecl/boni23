@@ -14,8 +14,8 @@ const Tabela = ({data, city, search}) => {
 					<tr>
 						<th>Restavracija</th>
 						<th>"Vrednost obroka"</th>
-						<th>Povišanje (%)</th>
-						<th>Povišanje</th>
+						<th>Povečanje (%)</th>
+						<th>Povečanje</th>
 					</tr>
 				</thead>
 				<tbody>

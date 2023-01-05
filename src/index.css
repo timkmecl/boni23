@@ -31,12 +31,20 @@ code {
   text-align: center;
 }
 
-strong, h1, h2 {
-  color: rgb(196, 15, 39);	
+strong:not(.ok), h1, h2 {
+  /*color: rgb(196, 15, 39);	*/
+  background: -webkit-linear-gradient(80deg, rgb(196, 15, 39), rgb(245, 91, 20));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 strong {
   font-size: 1.05em;
+}
+
+strong.ok {
+  color: rgb(86, 97, 129);
 }
 
 .search {
@@ -76,7 +84,7 @@ table {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 table thead tr {
-  background-color: rgb(196, 15, 39);	
+  background: -webkit-linear-gradient(80deg, rgb(196, 15, 39), rgb(224, 61, 20));
   color: #ffffff;
   text-align: left;
 }

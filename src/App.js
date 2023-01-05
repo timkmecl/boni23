@@ -30,8 +30,8 @@ function App() {
     <div className="App">
       <div className='main'>
         <h1>Stanje študentske prehrane 2023</h1>
-        <p>S 1. januarjem se je vrednost bona <em>zvišala</em> za <strong>0,68 €</strong>. 
-          Namesto ugodnejših cen za študente pa se je povprečno doplačilo <em>zvišalo</em> za <strong>1,08 € (35 %)</strong> </p>
+        <p>S 1. januarjem se je vrednost bona zvišala za <strong className='ok'>0,68 €</strong>. 
+          Namesto ugodnejših cen za študente pa se je povprečno doplačilo zvišalo za <strong>1,08 € (35 %)</strong> </p>
         <p>Ob <strong>10,3 %</strong> letni inflaciji oz. <strong>18,6 %</strong> inflaciji cen hrane in pijače
           dobijo restavracije za obrok zdaj v povprečju <strong>30 %</strong> več kot lani.</p>
       </div>
