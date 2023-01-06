@@ -10,9 +10,17 @@ function App() {
   const [data, setData] = useState(null);
   const [city, setCity] = useState('LJUBLJANA');
   const [search, setSearch] = useState('');
+  const [attribute, setAttribute] = useState('cena');
 
   useEffect(() => {
-    setData(rawData.filter(item => item.cena && item.cena_old))
+    setData(rawData.filter(item => item.cena && item.cena_old)
+      .map(item => {
+        if (!item.doplacilo_diff_percent && item.doplacilo_old === 0) {
+          item.doplacilo_diff_percent = item.doplacilo_diff === 0 ? 0 : Infinity;
+        }
+        return item;
+      })
+    )
   }, []);
 
   const handleCityChange = (e) => {
@@ -32,6 +40,7 @@ function App() {
         <p>Ob <strong>10,3 %</strong> letni inflaciji oz. <strong>18,6 %</strong> inflaciji cen hrane in pijače
           dobijo restavracije za obrok zdaj v povprečju <strong>30 %</strong> več kot lani.</p>
       </div>
+
       <div className='search'>
         <p>
           <label htmlFor="mesta">Izberi mesto: </label>
@@ -41,16 +50,25 @@ function App() {
             })}
           </select>
         </p>
+
         <p>
           <label htmlFor="search">Išči restavracijo: </label>
           <input type="search" name="search" id="search" value={search} onChange={handleSearchChange}/>
         </p>
+
+        <p>
+          <a onClick={() => setAttribute('cena')} className={attribute==='cena' ? 'selected' : ''}>Cena</a> 
+           {' | '}
+           <a onClick={() => setAttribute('doplacilo')} className={attribute==='doplacilo' ? 'selected' : ''} >Doplačilo</a>
+        </p>
+        
         <p className='disclaimer'>
             Podatki so zgolj informativne narave, ne jamčim za njihovo točnost in popolnost.
         </p>
       </div>
+
       {
-        data && <Tabela data={data} city={city} search={search} />
+        data && <Tabela data={data} city={city} search={search} attribute={attribute} />
       }
 
       <div id="created-by">
