@@ -23,6 +23,10 @@ code {
   font-size: 1em;
 }
 
+.main h1 {
+  margin: 25px 0;
+}
+
 .main p {
   text-align: justify;
 }
@@ -93,6 +97,11 @@ table td {
   padding: 10px 12px;
 }
 
+table th:not(:first-child),
+table td:not(:first-child) {
+  text-align: center;
+}
+
 table tbody tr {
   border-bottom: 1px solid #dddddd;
 }
@@ -106,13 +115,19 @@ table tbody tr:last-of-type {
 }
 
 @media (max-width: 600px) {
-  table th,
+  table th {
+    padding: 8px 10px;
+  }
   table td {
     padding: 6px 8px;
   }
   
   .table {
     padding: 5px 0px;
+  }
+
+  .main {
+    padding: 5px 15px;
   }
 }
 
