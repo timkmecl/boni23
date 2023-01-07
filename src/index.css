@@ -16,6 +16,31 @@ code {
     monospace;
 }
 
+img {
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+  display: block;
+  margin-bottom: 25px;
+  background-color: white;
+  padding: 0 0 5px 5px;
+  border-radius: 3px;
+}
+
+small {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  color: #888;
+}
+
+small a {
+  position: relative;
+  top: -1px;}
+
+.underline {
+  text-decoration: underline;
+}
+
 .main {
   max-width: 700px;
   margin: auto;
@@ -31,11 +56,11 @@ code {
   text-align: justify;
 }
 
-.main h1, .main h2 {
+.main h1, .main h2, .main h3 {
   text-align: center;
 }
 
-strong:not(.ok), h1, h2 {
+strong:not(.ok), h1, h2, h3 {
   /*color: rgb(196, 15, 39);	*/
   background: -webkit-linear-gradient(80deg, rgb(196, 15, 39), rgb(245, 91, 20));
   background-clip: text;
@@ -63,8 +88,16 @@ strong.ok {
   width: 100%;
 }
 
-.search input, .search select {
-  padding: 2px;
+input, select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+}
+
+input:active, input:focus, select:active, select:focus {
+  outline: none !important;	
+  border: 1px solid rgb(196, 15, 39) !important;
 }
 
 .disclaimer {
@@ -152,7 +185,7 @@ td.ime {
 }
 
 a {
-  color: black;
+  color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
