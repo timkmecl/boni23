@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/boni23/static/css/main.c62c4764.css",
-    "main.js": "/boni23/static/js/main.13dedc7f.js",
+    "main.css": "/boni23/static/css/main.36e9a52e.css",
+    "main.js": "/boni23/static/js/main.6a12c001.js",
+    "static/media/histogram-doplacil.png": "/boni23/static/media/histogram-doplacil.ae104ea5ec58f8f9cc39.png",
+    "static/media/histogram-povecanja-doplacil.png": "/boni23/static/media/histogram-povecanja-doplacil.c24c6466aa7bf47d6463.png",
     "index.html": "/boni23/index.html",
-    "main.c62c4764.css.map": "/boni23/static/css/main.c62c4764.css.map",
-    "main.13dedc7f.js.map": "/boni23/static/js/main.13dedc7f.js.map"
+    "main.36e9a52e.css.map": "/boni23/static/css/main.36e9a52e.css.map",
+    "main.6a12c001.js.map": "/boni23/static/js/main.6a12c001.js.map"
   },
   "entrypoints": [
-    "static/css/main.c62c4764.css",
-    "static/js/main.13dedc7f.js"
+    "static/css/main.36e9a52e.css",
+    "static/js/main.6a12c001.js"
   ]
 }
