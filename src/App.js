@@ -16,7 +16,9 @@ function App() {
   const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
-    setData(rawData.filter(item => item.cena && item.cena_old)
+    setData(
+      rawData
+      .filter(item => item.cena && item.cena_old)
       .map(item => {
         if (!item.doplacilo_diff_percent && item.doplacilo_old === 0) {
           item.doplacilo_diff_percent = item.doplacilo_diff === 0 ? 0 : Infinity;
@@ -40,7 +42,6 @@ function App() {
         <h1>Stanje študentske prehrane 2023</h1>
         <p>S 1. januarjem se je vrednost bona zvišala za <strong className='ok'>0,68 €</strong>. 
           Namesto ugodnejših cen za študente pa se je povprečno doplačilo zvišalo za <strong>1,08 € (35 %)</strong> </p>
-
         <p>Ob <strong>10,3 %</strong> letni inflaciji oz. <strong>18,6 %</strong> inflaciji cen hrane in pijače
           dobijo restavracije za obrok zdaj v povprečju <strong>30 %</strong> več kot lani.
           {!showMore && <small><a className='underline' onClick={() => setShowMore(true)}>Pokaži več</a></small>}
@@ -50,7 +51,6 @@ function App() {
         <>
           <p>Včasih je maksimalno doplačilo <strong className='ok'>4,18 €</strong> zaračunavala približno vsaka <strong className='ok'>osma</strong> restavracija, 
             zdaj ko le-to znaša <strong>5,5 €</strong> pa že skoraj vsaka <strong>četrta</strong>. </p>
-
           <p>Število lokalov, ki ponujajo obroke brez doplačila, pa je padlo <strong>s 15 na 6</strong>.</p>
 
           <h3>Povišanje doplačil</h3>
@@ -58,7 +58,7 @@ function App() {
           <img src={img_povecanja_doplacil} alt="Povišanje doplačil" />
           
           <h3>Doplačila lani in zdaj</h3>
-          <p>Prikaz števila resstavracij z določenim doplačilom lani (modro) in letos (rdeče). 
+          <p>Prikaz števila restavracij z določenim doplačilom lani (modro) in letos (rdeče). 
             Navpični črti predstavljata povprečno doplačilo, ki po novem znaša skoraj toliko, kot je včasih maksimalno:</p>
           <img src={img_doplacila} alt="Doplačila lani in zdaj" />
 
@@ -70,7 +70,6 @@ function App() {
         }
       </div>
 
-
       <div className='search'>
         <p>
           <label htmlFor="mesta">Izberi mesto: </label>
@@ -80,18 +79,15 @@ function App() {
             })}
           </select>
         </p>
-
         <p>
           <label htmlFor="search">Išči restavracijo: </label>
           <input type="search" name="search" id="search" value={search} onChange={handleSearchChange}/>
         </p>
-
         <p>
           <a onClick={() => setAttribute('cena')} className={attribute==='cena' ? 'selected' : ''}>Cena</a> 
            {' | '}
            <a onClick={() => setAttribute('doplacilo')} className={attribute==='doplacilo' ? 'selected' : ''} >Doplačilo</a>
         </p>
-        
         <p className='disclaimer'>
             Podatki so zgolj informativne narave, ne jamčim za njihovo točnost in popolnost.
         </p>
