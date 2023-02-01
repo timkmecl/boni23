@@ -47,8 +47,7 @@ function App() {
           {!showMore && <small><a className='underline' onClick={() => setShowMore(true)}>Pokaži več</a></small>}
         </p>
 
-        {showMore &&
-        <>
+        <div style={{display: showMore ? '' : 'none'}}>
           <p>Včasih je maksimalno doplačilo <strong className='ok'>4,18 €</strong> zaračunavala približno vsaka <strong className='ok'>osma</strong> restavracija, 
             zdaj ko le-to znaša <strong>5,5 €</strong> pa že skoraj vsaka <strong>četrta</strong>. </p>
           <p>Število lokalov, ki ponujajo obroke brez doplačila, pa je padlo <strong>s 15 na 6</strong>.</p>
@@ -66,8 +65,7 @@ function App() {
             Izvorne podatke si lahko ogledate in prenesete <a className='underline' href="https://github.com/timkmecl/studentska-prehrana-scrapper-comparison/blob/master/data/restavracije.csv">tukaj</a>. 
             <small><a className='underline' onClick={() => {setShowMore(false); window.scrollTo(0, 0);}}>Pokaži manj</a></small>
           </p>
-        </>
-        }
+        </div>
       </div>
 
       <div className='search'>
