@@ -96,7 +96,7 @@ function App() {
       }
 
       <div id="created-by">
-		    <p>Website created by <a href="https://www.facebook.com/tim.kmecl/" target="_blank" rel="noopener noreferrer">Tim Kmecl</a></p>
+		    <p>Website created by <a href="https://kmecl.tk" target="_blank" rel="noopener noreferrer">Tim Kmecl</a></p>
 	    </div>
     </div>
   );
