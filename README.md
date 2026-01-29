@@ -9,7 +9,7 @@ Data used by this website was scraped from the web using https://github.com/timk
 - Data is presented in a table format, sorted by the percentage increase in meal prices.
 
 ## Usage
-To use the app, simply visit the [website](kmecl.tk/boni23) and browse the information provided. Use the search and filter function to find specific restaurants and view their current prices.
+To use the app, simply visit the [website](kmecl.eu/boni23) and browse the information provided. Use the search and filter function to find specific restaurants and view their current prices.
 
 ## Disclaimer
 Please note that the data provided by this app is for informational purposes only and is not guaranteed to be accurate or complete.
